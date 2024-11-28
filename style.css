@@ -26,12 +26,14 @@ body {
   overflow-y: scroll;
   background-color: white;
   border-radius: 10px;
-  padding: 16px;
+  padding: 14px;
 }
 .page-container::-webkit-scrollbar {
   display: none;
 }
 .page-container .top {
+  margin-bottom: -2vw;
+  padding: 2vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,6 +48,7 @@ body {
   width: 100%;
 }
 .page-container .profiles .images {
+  margin-bottom: -1vw;
   overflow-x: scroll;
   scrollbar-width: none;
   width: 100%;

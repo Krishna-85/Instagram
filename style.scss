@@ -26,13 +26,15 @@
     overflow-y: scroll;
     background-color: white;
     border-radius: 10px;
-    padding: 16px;
+    padding: 14px;
   
     &::-webkit-scrollbar {
       display: none;
     }
   
     .top {
+      margin-bottom: -2vw;
+      padding: 2vw;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -49,6 +51,7 @@
       width: 100%;
   
       .images {
+        margin-bottom: -1vw;
         overflow-x: scroll;
         scrollbar-width: none;
         width: 100%;
