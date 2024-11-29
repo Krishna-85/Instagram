@@ -16,26 +16,26 @@
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: teal;
+    // background-color: teal;
   }
   
   .page-container {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
-    height: 90vh;
+    height: 90%;
     overflow-y: scroll;
     background-color: white;
     border-radius: 10px;
-    padding: 14px;
+    padding: 5px;
   
     &::-webkit-scrollbar {
       display: none;
     }
   
     .top {
-      margin-top: 3vw;
+      // margin-top: 5vw;
       margin-bottom: -2vw;
-      padding: 2vw;
+      padding: 1.5vw;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -57,9 +57,9 @@
         scrollbar-width: none;
         width: 100%;
         display: flex;
-        align-items: center;
+        // align-items: center;
         gap: 10px;
-        padding: 16px;
+        padding: 15px;
       }
   
       img {
@@ -94,12 +94,26 @@
             height: 30px;
           }
         }
-  
-        #post1 {
-          width: 100%;
-          border-radius: 8px;
-          margin: 8px 0;
+        .posts{
+          position: relative;
+          i{
+            font-size: 6vw;
+            position: absolute;
+            color: red;
+            opacity: 0.8;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: all ease 0.2s;
+
+          }
+          #post1 {
+            width: 100%;
+            border-radius: 8px;
+            margin: 8px 0;
+          }
         }
+  
   
         .post-icons {
           display: flex;
@@ -107,6 +121,10 @@
           align-items: center;
           padding: 8px 16px;
           font-size: 20px;
+          #mini-heart{
+            
+            
+          }
   
           h6 {
             font-size: 0.8rem;
@@ -153,6 +171,7 @@
   
   @media (max-width: 480px) {
     .top {
+      margin-top: 10vw;
       i {
         font-size: 18px;
       }

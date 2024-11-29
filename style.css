@@ -16,25 +16,23 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: teal;
 }
 
 .page-container {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
-  height: 90vh;
+  height: 90%;
   overflow-y: scroll;
   background-color: white;
   border-radius: 10px;
-  padding: 14px;
+  padding: 5px;
 }
 .page-container::-webkit-scrollbar {
   display: none;
 }
 .page-container .top {
-  margin-top: 3vw;
   margin-bottom: -2vw;
-  padding: 2vw;
+  padding: 1.5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,9 +52,8 @@ body {
   scrollbar-width: none;
   width: 100%;
   display: flex;
-  align-items: center;
   gap: 10px;
-  padding: 16px;
+  padding: 15px;
 }
 .page-container .profiles img {
   border: 3px solid rgb(252, 55, 150);
@@ -85,7 +82,20 @@ body {
   width: 30px;
   height: 30px;
 }
-.page-container .users .user1 #post1 {
+.page-container .users .user1 .posts {
+  position: relative;
+}
+.page-container .users .user1 .posts i {
+  font-size: 6vw;
+  position: absolute;
+  color: red;
+  opacity: 0.8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all ease 0.2s;
+}
+.page-container .users .user1 .posts #post1 {
   width: 100%;
   border-radius: 8px;
   margin: 8px 0;
@@ -124,6 +134,9 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .top {
+    margin-top: 10vw;
+  }
   .top i {
     font-size: 18px;
   }
