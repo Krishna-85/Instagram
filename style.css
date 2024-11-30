@@ -10,145 +10,114 @@ body {
   height: 100%;
 }
 
-body {
-  display: flex;
+main {
+  width: 100%;
+  background-color: teal;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
 }
-
-.page-container {
-  width: 100%;
-  max-width: 400px;
-  height: 90%;
-  overflow-y: scroll;
+main .page-container {
   background-color: white;
-  border-radius: 10px;
-  padding: 5px;
 }
-.page-container::-webkit-scrollbar {
+main .page-container .header {
+  margin-top: 20px;
+  padding: 0em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .page-container .header .tools {
+  gap: 20px;
+  display: flex;
+}
+main .page-container .header .tools i {
+  font-size: 1.7em;
+  gap: 5vw;
+}
+main .page-container .stories {
+  white-space: nowrap;
+  gap: 15px;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+}
+main .page-container .stories::-webkit-scrollbar {
   display: none;
 }
-.page-container .top {
-  margin-bottom: -2vw;
-  padding: 1.5vw;
+main .page-container .stories .story {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
-.page-container .top h1 {
-  font-family: "Satisfy", cursive;
-}
-.page-container .top i {
-  font-size: 24px;
-}
-.page-container .profiles {
-  width: 100%;
-}
-.page-container .profiles .images {
-  margin-bottom: -1vw;
-  overflow-x: scroll;
-  scrollbar-width: none;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  padding: 15px;
-}
-.page-container .profiles img {
-  border: 3px solid rgb(252, 55, 150);
-  flex-shrink: 0;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
-}
-.page-container .profiles h5 {
-  font-size: 0.8rem;
-  text-align: center;
-}
-.page-container .users .user1 .id {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 16px;
-}
-.page-container .users .user1 .id img {
+main .page-container .stories .story img {
+  padding: 0.1vw;
+  border: 3.5px solid rgb(255, 0, 200);
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
 }
-.page-container .users .user1 .posts {
-  position: relative;
+main .page-container .stories .story h4 {
+  font-size: 0.7em;
 }
-.page-container .users .user1 .posts i {
-  font-size: 6vw;
-  position: absolute;
-  color: red;
+main .page-container .posts {
+  height: 100vh;
+}
+main .page-container .posts::-webkit-scrollbar {
+  display: none;
+}
+main .page-container .posts .page .post1 .description {
+  margin-top: -1vw;
+}
+main .page-container .posts .page .post1 .description p {
   opacity: 0.8;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: all ease 0.2s;
 }
-.page-container .users .user1 .posts #post1 {
+main .page-container .posts .page .post1 img {
+  padding: 0.8vw;
   width: 100%;
-  border-radius: 8px;
-  margin: 8px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
 }
-.page-container .users .user1 .post-icons {
+main .page-container .posts .page .post1 .reaction {
+  margin: -0.8vw 1vw;
+  align-items: center;
+  justify-content: space-between;
+}
+main .page-container .posts .page .post1 .reaction .both {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 8px 16px;
+}
+main .page-container .posts .page .post1 .reaction .likes {
+  gap: 0.5vw;
+  margin-top: 10px;
+  display: flex;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+main .page-container .posts .page .post1 .reaction .save {
   font-size: 20px;
+  bottom: 1.2vw;
 }
-.page-container .users .user1 .post-icons h6 {
-  font-size: 0.8rem;
+main .page-container .posts .page .profiles {
+  display: flex;
+  align-items: center;
 }
-.page-container .users .user1 .post-icons p {
-  font-size: 0.9rem;
-  margin-top: 4px;
+main .page-container .posts .page .profiles h5 {
+  font-size: 1em;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .page-container {
-    width: 95%;
-    height: 95vh;
-  }
-  .profiles img {
-    width: 40px;
-    height: 40px;
-  }
-  .users .user1 .id img {
-    width: 30px;
-    height: 30px;
-  }
-  .users .user1 .post-icons {
-    font-size: 18px;
-  }
+main .page-container .posts .page .profiles .prof-name p {
+  font-size: 0.8em;
+  opacity: 0.8;
 }
-@media (max-width: 480px) {
-  .top {
-    margin-top: 10vw;
-  }
-  .top i {
-    font-size: 18px;
-  }
-  .profiles img {
-    width: 30px;
-    height: 30px;
-  }
-  .users .user1 .id img {
-    width: 25px;
-    height: 25px;
-  }
-  .users .user1 .post-icons {
-    font-size: 16px;
-  }
+main .page-container .posts .page .profiles img {
+  padding: 2px;
+  border: 2px solid rgb(255, 0, 200);
+  margin: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
